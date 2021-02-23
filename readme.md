@@ -28,7 +28,7 @@ Or you can run it from Maven directly using the Spring Boot Maven plugin. If you
 Our issue tracker is available here: https://github.com/spring-projects/spring-petclinic/issues
 
 
-## Database configuration
+## Database configuration.
 
 In its default configuration, Petclinic uses an in-memory database (H2) which
 gets populated at startup with data. The h2 console is automatically exposed at `http://localhost:8080/h2-console`
@@ -108,7 +108,7 @@ Here is a list of them:
 |------|-------|
 | Spring JDBC: simplify usage of NamedParameterJdbcTemplate | [SPR-10256](https://jira.springsource.org/browse/SPR-10256) and [SPR-10257](https://jira.springsource.org/browse/SPR-10257) |
 | Bean Validation / Hibernate Validator: simplify Maven dependencies and backward compatibility |[HV-790](https://hibernate.atlassian.net/browse/HV-790) and [HV-792](https://hibernate.atlassian.net/browse/HV-792) |
-| Spring Data: provide more flexibility when working with JPQL queries | [DATAJPA-292](https://jira.springsource.org/browse/DATAJPA-292) |
+| Spring Data: provide more flexibility when working with JPQL queries | [DATAJPA-292](https://jira.springsource.org/browse/DATAJPA-292) |.
 
 
 # Contributing
