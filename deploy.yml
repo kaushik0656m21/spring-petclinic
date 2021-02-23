@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: petclinic
-        image: kaushik0656m21/petclinic1:$BUILD_NUMBER
+        image: kaushik0656m21/petclinic1:16
         ports:
         - containerPort: 8080
 
