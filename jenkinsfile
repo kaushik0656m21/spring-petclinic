@@ -9,7 +9,7 @@ pipeline{
         }
         stage ('docker image'){
             steps{
-                sh 'sudo docker build -f /root/spring-petclinic/dockerfile  -t kaushik0656m21/petclinic1:${BUILD_NUMBER} .'
+                sh 'sudo docker build   -t kaushik0656m21/petclinic1:${BUILD_NUMBER} .'
             }
         }
         stage ('docker hub ') {
@@ -22,7 +22,7 @@ pipeline{
         }
         stage ('kubernetes deploy') {
             steps{
-                sh 'sudo kubectl apply -f /root/spring-petclinic/deploy.yml '
+                sh 'sudo kubectl apply deploy.yml '
             }
         }
     }
