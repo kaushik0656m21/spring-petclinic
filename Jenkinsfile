@@ -22,7 +22,7 @@ pipeline{
         }
         stage ('kubernetes deploy') {
             steps{
-                sh 'envsubst < ${WORKSPACE}/deploy.yaml | sudo  kubectl apply -f -'
+                sh 'envsubst < ${WORKSPACE}/deploy.yml | sudo  kubectl apply -f -'
             }
         }
     }
