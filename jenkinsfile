@@ -9,7 +9,7 @@ pipeline{
         }
         stage ('docker image'){
             steps{
-                sh 'sudo docker build -f /root/spring-petclinic/dockerfile  -t kaushik0656m21/petclinic1:$BUILD_NUMBER .'
+                sh 'sudo docker build -f /root/spring-petclinic/dockerfile  -t kaushik0656m21/petclinic1:${BUILD_NUMBER} .'
             }
         }
         stage ('docker hub ') {
@@ -17,7 +17,7 @@ pipeline{
                 withCredentials([string(credentialsId: 'docker_hub_pwd', variable: 'docker_hub_pwd')]) {
                  sh ' sudo docker login -u kaushik0656m21 -p${docker_hub_pwd}'
                  }
-                 sh ' sudo docker push kaushik0656m21/petclinic1:$BUILD_NUMBER'
+                 sh ' sudo docker push kaushik0656m21/petclinic1:${BUILD_NUMBER}'
             }
         }
         stage ('kubernetes deploy') {
